@@ -28,6 +28,7 @@ fastify.post('/email', async (request, response) => {
         response.send({"result": "success"})
     } catch (e) {
         console.log(e)
+        response.send({"error": e})
     }
 
 })
