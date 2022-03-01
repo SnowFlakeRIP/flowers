@@ -6,6 +6,8 @@ const nodemailer = require('nodemailer')
 fastify.post('/email', async (request, response) => {
     try {
         const email = request.body.email
+        const name = request.body.name
+        const telefon = request.body.number
         if (!email) {
             response.send({"error": "Email is not received"})
         }
